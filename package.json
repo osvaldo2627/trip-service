@@ -1,0 +1,35 @@
+{
+  "name": "trip-service",
+  "version": "1.0.0",
+  "description": "Trip service project.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm test",
+    "lint": "npx standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/osvaldo2627/trip-service.git"
+  },
+  "keywords": [
+    "trips",
+    "tutorial"
+  ],
+  "author": "Osvaldo Aguilar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/osvaldo2627/trip-service/issues"
+  },
+  "homepage": "https://gitlab.com/osvaldo2627/trip-service#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "patch": "0.0.1",
+    "swagger-express-middleware": "^2.0.4",
+    "swagger-ui-express": "^4.1.2",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}
