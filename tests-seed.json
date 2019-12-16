@@ -1,0 +1,90 @@
+{
+  "header": {},
+  "path": {
+    "customerId": "customerIdNum1"
+  },
+  "/customers": {
+    "post": {
+      "200": {
+        "body": {
+          "body": {
+            "firstName": "Osvaldo",
+            "lastName": "Aguilar",
+            "email": "valdobox@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 87
+          }
+        }
+      },
+      "400": {
+        "body": {
+          "body": {
+            "firstName": "Osvaldo",
+            "lastName": "Aguilar",
+            "email": "valdobox@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 800
+          }
+        }
+      }
+    }
+  },
+  "/customers/{customerId}": {
+    "get": {
+      "200": {
+        "path": {
+          "customerId": "customerIdNum1"
+        }
+      },
+      "404": {
+        "path": {
+          "customerId": "NonCustomerIdNum1"
+        }
+      }
+    },
+    "patch": {
+      "200": {
+        "path": {
+          "customerId": "customerIdNum1"
+        },
+        "body": {
+          "body": {
+            "firstName": "Osvaldo",
+            "lastName": "Aguilar",
+            "email": "valdobox@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 87
+          }
+        }
+      },
+      "400": {
+        "path": {
+          "customerId": "customerIdNum1"
+        },
+        "body": {
+          "body": {
+            "firstName": "Osvaldo",
+            "lastName": "Aguilar",
+            "email": "valdobox@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 800
+          }
+        }
+      },
+      "404": {
+        "path": {
+          "customerId": "NonCustomerIdNum1"
+        },
+        "body": {
+          "body": {
+            "firstName": "Osvaldo",
+            "lastName": "Aguilar",
+            "email": "valdobox@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 100
+          }
+        }
+      }
+    }
+  }
+}
