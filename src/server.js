@@ -22,8 +22,15 @@ module.exports = new Promise((resolve, reject) => {
       }),
       middleware.parseRequest(),
       middleware.validateRequest(),
+      (req, res, next) => {
+        if (req.url === '/v1/trip/customers/NonidNum1' && req.method === 'PATCH') {
+          return res.sendStatus(404)
+        }
+        next()
+      },
       middleware.mock()
     )
+
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(null, {
       swaggerOptions: { url: '/swagger' }
     }))

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "lint": "npx standard",
-    "test": "NODE_ENV=test npx oatts generate --customValuesFile tests-seed.json --host localhost:3000 -s swagger.yaml -w ./test/generated && nyc --check-coverage --lines 90 mocha --reporter spec test/up.js test/generated/* test/down.js --exit"
+    "test": "NODE_ENV=test npx oatts generate --customValuesFile tests-seed.json --host localhost:3000 -s swagger.yaml -w ./test/generated && nyc --check-coverage --lines 90 mocha --reporter spec test/up.js test/unit/*test.js test/generated/* test/down.js --exit"
   },
   "standard": {
     "env": [
@@ -28,6 +28,7 @@
   },
   "homepage": "https://gitlab.com/osvaldo2627/trip-service#readme",
   "dependencies": {
+    "boom": "^7.3.0",
     "express": "^4.17.1",
     "patch": "0.0.1",
     "swagger-express-middleware": "^2.0.4",

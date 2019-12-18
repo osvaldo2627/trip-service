@@ -77,10 +77,6 @@
         },
         "body": {
           "body": {
-            "firstName": "Osvaldo",
-            "lastName": "Aguilar",
-            "email": "valdobox@mail.com",
-            "birthday": "2019-12-16T14:31:44.523Z",
             "weight": 100
           }
         }
