@@ -1,7 +1,7 @@
 {
   "header": {},
   "path": {
-    "customerId": "customerIdNum1"
+    "id": "idNum1"
   },
   "/customers": {
     "post": {
@@ -29,23 +29,23 @@
       }
     }
   },
-  "/customers/{customerId}": {
+  "/customers/{id}": {
     "get": {
       "200": {
         "path": {
-          "customerId": "customerIdNum1"
+          "id": "idNum1"
         }
       },
       "404": {
         "path": {
-          "customerId": "NonCustomerIdNum1"
+          "id": "NonidNum1"
         }
       }
     },
     "patch": {
       "200": {
         "path": {
-          "customerId": "customerIdNum1"
+          "id": "idNum1"
         },
         "body": {
           "body": {
@@ -59,7 +59,7 @@
       },
       "400": {
         "path": {
-          "customerId": "customerIdNum1"
+          "id": "idNum1"
         },
         "body": {
           "body": {
@@ -73,7 +73,7 @@
       },
       "404": {
         "path": {
-          "customerId": "NonCustomerIdNum1"
+          "id": "NonidNum1"
         },
         "body": {
           "body": {
@@ -89,12 +89,12 @@
     "delete": {
       "200": {
         "path": {
-          "customerId": "customerIdNum2"
+          "id": "idNum2"
         }
       },
       "404": {
         "path": {
-          "customerId": "NonCustomerIdNum1"
+          "id": "NonidNum1"
         }
       }
     }
