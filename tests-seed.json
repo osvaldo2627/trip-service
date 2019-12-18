@@ -85,6 +85,18 @@
           }
         }
       }
+    },
+    "delete": {
+      "200": {
+        "path": {
+          "customerId": "customerIdNum2"
+        }
+      },
+      "404": {
+        "path": {
+          "customerId": "NonCustomerIdNum1"
+        }
+      }
     }
   }
 }

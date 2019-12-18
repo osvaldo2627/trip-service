@@ -1,4 +1,4 @@
 module.exports = {
   server: null,
-  swaggerMockDataStore: null
+  basePATCH: '/v1/trip/'
 }

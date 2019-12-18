@@ -6,17 +6,14 @@ const app = express()
 const router = express.Router()
 
 const path = require('path')
-
 const swaggerSpec = path.join(__dirname, '../swagger.yaml')
-
-const basePATCH = '/v1/trip/'
+const { basePATCH } = require('./config')
 
 module.exports = new Promise((resolve, reject) => {
   swagger(swaggerSpec, app, (err, middleware) => {
     if (err) {
       reject(err)
     }
-
     app.use(
       middleware.metadata(),
       middleware.CORS(),
