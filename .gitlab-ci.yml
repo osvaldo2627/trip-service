@@ -4,11 +4,14 @@ stages:
 
 build:
   stage: build
+  image: node:10-alpine 
   script:
     - echo "Building..."
     - npm i
 
 test:
   stage: test
+  image: node:10-alpine 
   script:
-    - echo "Testing...."
+    - npm i
+    - npm run test
