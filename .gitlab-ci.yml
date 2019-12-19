@@ -1,0 +1,23 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+building_image:
+  stage: build
+  script:
+    - echo "Building image..."
+    - npm i
+  artifacts:
+    paths:
+      - node_modules/
+
+test:
+  stage: test
+  script:
+    - npm run test

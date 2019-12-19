@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "npm test",
-    "lint": "npx standard"
+    "lint": "npx standard",
+    "test": "NODE_ENV=test npx oatts generate --customValuesFile tests-seed.json --host localhost:3000 -s swagger.yaml -w ./test/generated && nyc --check-coverage --lines 90 mocha --reporter spec test/up.js test/unit/*test.js test/generated/* test/down.js --exit"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
   },
   "repository": {
     "type": "git",
@@ -23,6 +28,7 @@
   },
   "homepage": "https://gitlab.com/osvaldo2627/trip-service#readme",
   "dependencies": {
+    "boom": "^7.3.0",
     "express": "^4.17.1",
     "patch": "0.0.1",
     "swagger-express-middleware": "^2.0.4",
@@ -30,6 +36,11 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chakram": "^1.5.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "oatts": "^1.5.0",
     "standard": "^14.3.1"
   }
 }

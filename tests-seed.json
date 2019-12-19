@@ -1,0 +1,98 @@
+{
+  "header": {},
+  "path": {
+    "id": "idNum1"
+  },
+  "/customers": {
+    "post": {
+      "200": {
+        "body": {
+          "body": {
+            "firstName": "Osvaldo",
+            "lastName": "Aguilar",
+            "email": "valdobox@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 87
+          }
+        }
+      },
+      "400": {
+        "body": {
+          "body": {
+            "firstName": "Osvaldo",
+            "lastName": "Aguilar",
+            "email": "valdobox@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 800
+          }
+        }
+      }
+    }
+  },
+  "/customers/{id}": {
+    "get": {
+      "200": {
+        "path": {
+          "id": "idNum1"
+        }
+      },
+      "404": {
+        "path": {
+          "id": "NonidNum1"
+        }
+      }
+    },
+    "patch": {
+      "200": {
+        "path": {
+          "id": "idNum1"
+        },
+        "body": {
+          "body": {
+            "firstName": "Osvaldo",
+            "lastName": "Aguilar",
+            "email": "valdobox@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 87
+          }
+        }
+      },
+      "400": {
+        "path": {
+          "id": "idNum1"
+        },
+        "body": {
+          "body": {
+            "firstName": "Osvaldo",
+            "lastName": "Aguilar",
+            "email": "valdobox@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 800
+          }
+        }
+      },
+      "404": {
+        "path": {
+          "id": "NonidNum1"
+        },
+        "body": {
+          "body": {
+            "weight": 100
+          }
+        }
+      }
+    },
+    "delete": {
+      "200": {
+        "path": {
+          "id": "idNum2"
+        }
+      },
+      "404": {
+        "path": {
+          "id": "NonidNum1"
+        }
+      }
+    }
+  }
+}
