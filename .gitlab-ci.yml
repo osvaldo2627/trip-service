@@ -1,17 +1,23 @@
+image: node:lastest
+
 stages:
   - build
   - test
 
-build:
+cache:
+  paths:
+    - node_modules/
+
+building_image:
   stage: build
-  image: node:10-alpine 
   script:
-    - echo "Building..."
+    - echo "Building image..."
     - npm i
+  artifacts:
+    paths:
+      - node_modules/
 
 test:
   stage: test
-  image: node:10-alpine 
   script:
-    - npm i
     - npm run test
