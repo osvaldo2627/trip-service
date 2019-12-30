@@ -31,9 +31,12 @@
     "boom": "^7.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongodb-memory-server": "^6.2.1",
+    "mongoose": "^5.8.3",
     "patch": "0.0.1",
     "swagger-express-middleware": "^2.0.4",
     "swagger-ui-express": "^4.1.2",
+    "winston": "^3.2.1",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
