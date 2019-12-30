@@ -41,4 +41,12 @@ module.exports = ({ router, CustomerService }) => {
 
     res.send(document)
   })
+
+  router.patch('/customers/:id', async (req, res) => {
+    const { id } = req.pathParams
+    const document = await CustomerService.findOneAndUpdate({ id }, req.body, { new: true })
+    if (!document) return res.sendStatus(404)
+
+    res.send(document)
+  })
 }
