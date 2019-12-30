@@ -5,6 +5,8 @@ const db = require('../src/bootstrap/db')
 
 const config = require('../src/config')
 config.server = require('./../src/server')
+const fixtures = require('./fixtures/customers')
+const Customer = require('../src/model/customer-model')
 
 const PORT = process.env.PORT || 3000
 
@@ -28,5 +30,15 @@ describe('boostrap API', function () {
         done()
       })
     })
+  })
+
+  it('populate db', async () => {
+    console.log('fixtures 0')
+    console.log(fixtures[1])
+    const testDocuments = [
+      new Customer(fixtures[0]),
+      new Customer(fixtures[1])
+    ]
+    await Promise.all(testDocuments.map(record => record.save()))
   })
 })
