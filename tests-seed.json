@@ -16,6 +16,17 @@
           }
         }
       },
+      "409": {
+        "body": {
+          "body": {
+            "firstName": "Valdo",
+            "lastName": "Aguilar",
+            "email": "valdo@mail.com",
+            "birthday": "2019-12-16T14:31:44.523Z",
+            "weight": 87
+          }
+        }
+      },
       "400": {
         "body": {
           "body": {

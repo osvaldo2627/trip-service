@@ -89,11 +89,13 @@ paths:
           $ref: '#/definitions/Customer'
       responses:
         200:
-          description: "successful operation"
+          description: "Successful operation"
           schema:
             $ref: "#/definitions/Customer"
         400:
           description: "Invalid Customer"
+        409:
+          description: "Conflic"
           
   /customers/{id}:
     get:
