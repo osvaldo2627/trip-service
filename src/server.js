@@ -28,6 +28,9 @@ module.exports = new Promise((resolve, reject) => {
       swaggerOptions: { url: '/swagger' }
     }))
 
+    // loading controllers
+    require('../src/controller/customer-controller')({ router })
+
     app.use(basePATCH, router)
 
     resolve(app)
