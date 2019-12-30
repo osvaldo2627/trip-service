@@ -1,3 +1,4 @@
+const boom = require('@hapi/boom')
 const Customer = require('../model/customer-model')
 const uuidv1 = require('uuid/v1')
 
@@ -17,5 +18,16 @@ module.exports = ({ router, CustomerService }) => {
     await record.save()
 
     res.send(record)
+  })
+
+  router.get('/customers/:id', async (req, res) => {
+    const { id } = req.pathParams
+    const document = await CustomerService.findOne({ id })
+
+    if (!document) {
+      throw boom.notFound()
+    }
+
+    res.send(document)
   })
 }
