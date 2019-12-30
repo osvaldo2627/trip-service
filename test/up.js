@@ -33,8 +33,6 @@ describe('boostrap API', function () {
   })
 
   it('populate db', async () => {
-    console.log('fixtures 0')
-    console.log(fixtures[1])
     const testDocuments = [
       new Customer(fixtures[0]),
       new Customer(fixtures[1])

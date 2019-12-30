@@ -30,4 +30,15 @@ module.exports = ({ router, CustomerService }) => {
 
     res.send(document)
   })
+
+  router.delete('/customers/:id', async (req, res) => {
+    const { id } = req.pathParams
+    const document = await CustomerService.findOneAndDelete({ id })
+
+    if (!document) {
+      throw boom.notFound()
+    }
+
+    res.send(document)
+  })
 }
