@@ -1,3 +1,4 @@
 # trip-service
 
-Trip service project.
+Trip services project is intended for 
+the swagger base development workshop.
